@@ -5,6 +5,33 @@ $secondary: #1ac888;
 $error: #d32752;
 $info: #f6c31c;
 
+//color pallete 
+//*Map
+$color:(
+    "primary": $primary,
+    "secondary": $secondary,
+    "error": $error,
+    "info": $info,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "purple": #9900ff,
+    "gray": #808080,
+    "black": black,
+    "white": white
+);
+
+
+@debug map-get($color, "purple"); //returns the value for the key
+@debug map-has-key($color, "secondary" ); // Returns a boolean after checking if the map has the key or not
+@debug map-remove($color, "primary"); //Returns a new map after removing the key
+@debug map-merge($color, ("pink": #ffc0cb)); //Merge two maps: NOTE: Map is around a parenthesis so we can pass am instant map like this
+
+.test-btn {
+    background-color: map-get($color, "purple");
+}
+
 //Spacing
 $base-padding: 0.75rem;
 $base-margin: 0.75rem;
