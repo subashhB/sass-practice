@@ -7,7 +7,7 @@ $info: #f6c31c;
 
 //color pallete 
 //*Map
-$color:(
+$colors:(
     "primary": $primary,
     "secondary": $secondary,
     "error": $error,
@@ -15,6 +15,7 @@ $color:(
     "blue": #1919e6,
     "red": #e61919,
     "yellow": #e6e619,
+    "orange": #ffa600,
     "green": #19e635,
     "purple": #9900ff,
     "gray": #808080,
@@ -23,13 +24,13 @@ $color:(
 );
 
 
-@debug map-get($color, "purple"); //returns the value for the key
-@debug map-has-key($color, "secondary" ); // Returns a boolean after checking if the map has the key or not
-@debug map-remove($color, "primary"); //Returns a new map after removing the key
-@debug map-merge($color, ("pink": #ffc0cb)); //Merge two maps: NOTE: Map is around a parenthesis so we can pass am instant map like this
+@debug map-get($colors, "purple"); //returns the value for the key
+@debug map-has-key($colors, "secondary" ); // Returns a boolean after checking if the map has the key or not
+@debug map-remove($colors, "primary"); //Returns a new map after removing the key
+@debug map-merge($colors, ("pink": #ffc0cb)); //Merge two maps: NOTE: Map is around a parenthesis so we can pass am instant map like this
 
 .test-btn {
-    background-color: map-get($color, "purple");
+    background-color: map-get($colors, "purple");
 }
 
 //Spacing
