@@ -3,6 +3,12 @@
         color: $val; 
     } //*This is the way of using variables inside a selector #{$variable}.
 
+    .text-hover-#{$key} {
+        &:hover{
+            color: $val;
+        }
+    }
+
     .bg-#{$key}{
         background-color: $val;
     }
@@ -11,6 +17,12 @@
         @for $i from 1 through 9 { // This is the SASS for loop
             .text-#{$key}-light-#{$i}{
                 color: mix(white, $val, $i * 10%);
+            }
+
+            .text-hover-#{$key}-light-#{$i}{
+                &:hover{
+                    color: mix(white, $val, $i*10%);
+                }
             }
 
             .bg-#{$key}-light-#{$i} {
@@ -23,6 +35,13 @@
             .text-#{$key}-dark-#{$i}{
                 color: mix(black, $val, $i * 10%);
             }
+
+            .text-hover-#{$key}-dark-#{$i}{
+                &:hover{
+                    color: mix(black, $val, $i * 10%);
+                }
+            }
+
             .bg-#{$key}-dark-#{$i}{
                 background-color: mix(black, $val, $i * 10%);
             }
