@@ -27,4 +27,12 @@
             background-color: $val;
         }
     }
+    .btn-complement-#{$key}{ // Complement here is the complementary color of the Color Theory.
+        @include btn($val);
+        color: light-comp($val);
+        &:hover{
+            background-color: light-comp($val);
+            color: $val;
+        }
+    }
 }
