@@ -1,7 +1,7 @@
 //Varibles
 // *Theme Colors
 $primary: #326dee;
-$secondary: #1ac888;
+$secondary: #1ac886;
 $error: #d32752;
 $info: #f6c31c;
 
@@ -22,12 +22,6 @@ $colors:(
     "black": black,
     "white": white
 );
-
-
-@debug map-get($colors, "purple"); //returns the value for the key
-@debug map-has-key($colors, "secondary" ); // Returns a boolean after checking if the map has the key or not
-@debug map-remove($colors, "primary"); //Returns a new map after removing the key
-@debug map-merge($colors, ("pink": #ffc0cb)); //Merge two maps: NOTE: Map is around a parenthesis so we can pass am instant map like this
 
 .test-btn {
     background-color: map-get($colors, "purple");
